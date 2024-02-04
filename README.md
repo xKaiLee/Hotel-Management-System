@@ -14,9 +14,9 @@ the system offers a platform with controllers specifically designed for managing
 - JWT Authentication
 
 # Run
-1.Setup MySQL database and update variables in application.properties
-2.Open the project in your IDE and run HotelApplication.java
-3.Go to the localhost:{your_port}/signup to create user account or log in with your admin account (L:admin, P:admin
+1. Setup MySQL database and update variables in application.properties
+2. Open the project in your IDE and run HotelApplication.java
+3. Go to the localhost:{your_port}/signup to create user account or log in with your admin account (L:admin, P:admin
 
 # Endpoints
 ## Login Controller:
