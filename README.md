@@ -23,13 +23,13 @@ the system offers a platform with controllers specifically designed for managing
 ## Login Controller:
 Sign Up:
   - Endpoint: /signup
-  - Users can sign up for the system by providing necessary details
+  - Users can sign up for the system by providing necessary details.
 Sign In:
   - Endpoint: /signin
-  - Users can sign in using their credentials, JWT is used for authentication
+  - Users can sign in using their credentials, JWT is used for authentication.
 Logout:
   - Endpoint: /logout
-  - Allows users to securely log out
+  - Allows users to securely log out.
 
 ## Panel Controller
 Show Choose Panel Page:
