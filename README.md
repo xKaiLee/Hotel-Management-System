@@ -2,10 +2,10 @@
 ## 📝About HMS
 REST API application, this Hotel Management System aims to simplify and automate various aspects of hotel operations. Leveraging Java, the Spring Framework, and MYSQL,
 the system offers a platform with controllers specifically designed for managing guests and rooms.  Some of the features that have been implemented:
-	- JWT Authentication,
-	- Logging in/registering accounts,
- 	- Management of the users and room databases,
-	- Booking available rooms
+- JWT Authentication,
+- Logging in/registering accounts,
+- Management of the users and room databases,
+- Booking available rooms
 
 # 🛠️ Technologies
 - Java
