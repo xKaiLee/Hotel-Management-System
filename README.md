@@ -13,12 +13,12 @@ the system offers a platform with controllers specifically designed for managing
 - Thymeleaf
 - JWT Authentication
 
-#Run
+# Run
 1.Setup MySQL database and update variables in application.properties
 2.Open the project in your IDE and run HotelApplication.java
 3.Go to the localhost:{your_port}/signup to create user account or log in with your admin account (L:admin, P:admin
 
-#Endpoints
+# Endpoints
 ## Login Controller:
 Sign Up:
   - Endpoint: /signup
