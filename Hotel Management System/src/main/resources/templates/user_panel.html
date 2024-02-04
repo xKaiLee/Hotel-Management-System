@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User Panel</title>
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <link rel="stylesheet" type="text/css" href="../static/choose_panel.css">
+</head>
+<body>
+
+<h1>Panel Użytkownika</h1>
+<div>
+    <a href="/room/available">
+        <button>Przeglądaj dostępne pokoje</button>
+    </a>
+    <a href="/room/rooms">
+        <button>Zarezerwowane pokoje</button>
+    </a>
+</div>
+<form action="/logout" method="post">
+    <button type="submit">Wyloguj</button>
+</form>
+
+</body>
+</html>

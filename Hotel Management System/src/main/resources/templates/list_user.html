@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Gości</title>
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <link rel="stylesheet" type="text/css" href="../static/styles.css">
+</head>
+<body>
+<div>
+    <h3>Lista Użytkowników</h3>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Imię</th>
+            <th>Nazwisko</th>
+            <th>Numer Telefonu</th>
+            <th>Edycja</th>
+            <th>Usuwanie</th>
+        </tr>
+        <tr th:each="user : ${user}">
+            <td th:text="${user.id}"></td>
+            <td th:text="${user.username}"></td>
+            <td th:text="${user.firstName}"></td>
+            <td th:text="${user.lastName}"></td>
+            <td th:text="${user.phoneNumber}"></td>
+            <td>
+                <a th:href="@{/user/edit/{id}(id=${user.id})}">Edytuj</a>
+            </td>
+            <td>
+                <a th:href="@{/user/delete/{id}(id=${user.id})}" style="color: red;">Usuń</a>
+            </td>
+        </tr>
+    </table>
+</div>
+<div>
+    <a href="/admin-panel" class="button">Powrót do strony głównej</a>
+</div>
+</body>
+</html>

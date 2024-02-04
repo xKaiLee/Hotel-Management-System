@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona Główna</title>
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <link rel="stylesheet" type="text/css" href="../static/home.css">
+</head>
+<body>
+<div class="container">
+    <h2>Welcome!</h2>
+    <div class="buttons">
+        <a href="/user/list"><button>Pokaż Listę Użytkowników</button></a>
+        <a href="/room/list"><button>Pokaż Listę Pokoi</button></a>
+        <a href="/room/new"><button>Dodaj Nowy Pokój</button></a>
+    </div>
+    <form th:action="@{/logout}" method="post">
+        <button type="submit">Wyloguj się</button>
+    </form>
+</div>
+</body>
+</html>

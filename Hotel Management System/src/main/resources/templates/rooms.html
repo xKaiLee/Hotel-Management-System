@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <link rel="stylesheet" type="text/css" href="../static/rooms.css">
+    <title>Rooms</title>
+</head>
+<body>
+
+<h1>Pokoje użytkownika</h1>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>Numer pokoju</th>
+        <th>Łóżka</th>
+        <th>Cena</th>
+        <th>Piętro</th>
+        <th>Anuluj</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="room : ${rooms}">
+        <td th:text="${room.roomNumber}"></td>
+        <td th:text="${room.beds}"></td>
+        <td th:text="${room.price}"></td>
+        <td th:text="${room.floorNumber}"></td>
+        <td>
+            <form th:action="@{/room/cancel-reservation}" method="post">
+                <input type="hidden" name="roomId" th:value="${room.id}" />
+                <button type="submit">Anuluj rezerwację</button>
+            </form>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

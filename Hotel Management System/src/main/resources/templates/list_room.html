@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Pokoi</title>
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <link rel="stylesheet" type="text/css" href="../static/styles.css">
+</head>
+<body>
+<div>
+    <h3>Lista Pokoi</h3>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Numer Pokoju</th>
+            <th>Numer Piętra</th>
+            <th>Cena</th>
+            <th>Liczba Łóżek</th>
+            <th>Zajęty</th>
+            <th>ID Gościa</th>
+            <th>Edycja</th>
+            <th>Usuwanie</th>
+        </tr>
+        <tr th:each="room : ${rooms}">
+            <td th:text="${room.id}"></td>
+            <td th:text="${room.roomNumber}"></td>
+            <td th:text="${room.floorNumber}"></td>
+            <td th:text="${room.price}"></td>
+            <td th:text="${room.beds}"></td>
+            <td th:text="${room.isOccupied}"></td>
+            <td th:text="${room.currentGuestId}"></td>
+            <td>
+                <a th:href="@{/room/edit/{id}(id=${room.id})}">Edytuj</a>
+            </td>
+            <td>
+                <a th:href="@{/room/delete/{id}(id=${room.id})}" style="color: red;">Usuń</a>
+            </td>
+        </tr>
+    </table>
+</div>
+<div>
+    <a href="/admin-panel" class="button">Powrót do strony głównej</a>
+</div>
+</body>
+</html>

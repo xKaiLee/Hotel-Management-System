@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dodaj nowy pokój</title>
+    <link rel="stylesheet" type="text/css" href="../static/newRoom.css">
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+</head>
+<body>
+<div>
+    <h3> Dodaj nowy pokój </h3>
+    <p th:if="${error}" class="error-message" style="color: red;" th:text="${error}"></p>
+    <form action="#" method="post" th:action="@{add}"
+          th:object="${room}">
+        <div>
+            <input type="text" th:field="*{roomNumber}" placeholder="Numer pokoju">
+            <span th:if="${#fields.hasErrors('roomNumber')}" th:errors="*{roomNumber}"></span>
+        </div>
+        <div>
+            <input type="number" th:field="*{floorNumber}" placeholder="Numer piętra">
+            <span th:if="${#fields.hasErrors('floorNumber')}" th:errors="*{floorNumber}"></span>
+        </div>
+        <div>
+            <input type="number" th:field="*{price}" placeholder="Cena">
+            <span th:if="${#fields.hasErrors('price')}" th:errors="*{price}"></span>
+        </div>
+        <div>
+            <input type="number" th:field="*{beds}" placeholder="Liczba łóżek">
+            <span th:if="${#fields.hasErrors('beds')}" th:errors="*{beds}"></span>
+        </div>
+        <div>
+            <button type="submit"> Zapisz </button>
+        </div>
+    </form>
+</div>
+</body>
+</html>
