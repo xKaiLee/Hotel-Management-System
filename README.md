@@ -32,88 +32,88 @@ the system offers a platform with controllers specifically designed for managing
   - Allows users to securely log out.
 
 ## Panel Controller
-Show Choose Panel Page:
+### Show Choose Panel Page:
   - Endpoint: /choose-panel
   - Displays the page allowing users to choose a panel
   - Method: GET
-Choose Panel:
+### Choose Panel:
   - Endpoint: /choose-panel
   - Method: POST
   - Parameters: panel (String) - Represents the selected panel (e.g., "admin" or "user").
   - Redirects users to the selected panel based on their choice
-Show User Panel:
+### Show User Panel:
   - Endpoint: /user-panel
   - Method: GET
   - Displays the user panel
-Show Admin Panel:
+### Show Admin Panel:
   - Endpoint: /admin-panel
   - Method: GET
   - Displays the admin panel
 
 ## Room Controller
-Show All Rooms:
+### Show All Rooms:
   - Endpoint: /room/list
   - Method: GET
   - Displays a list of all rooms
-Add New Room:
+### Add New Room:
   - Endpoint: /room/new
   - Method: GET
   - Displays a form for adding a new room
-Save New Room:
+### Save New Room:
   - Endpoint: /room/add
   - Method: POST
   - Saves a new room to the system
-Edit Room:
+### Edit Room:
   - Endpoint: /room/edit/{id}
   - Method: GET
   - Displays a form to edit an existing room
-Update Room:
+### Update Room:
   - Endpoint: /room/update/{id}
   - Method: POST
   - Updates an existing room with new information
-Delete Room:
+### Delete Room:
   - Endpoint: /room/delete/{id}
   - Method: GET
   - Deletes a room from the system
-Show Available Rooms:
+### Show Available Rooms:
   - Endpoint: /room/available
   - Method: GET
   - Displays a list of available rooms
-Reserve Room:
+### Reserve Room:
   - Endpoint: /room/reserve
   - Method: POST
   - Reserves a room for the current user
-Display Rooms for Current User:
+### Display Rooms for Current User:
   - Endpoint: /room/rooms
   - Method: GET
   - Displays rooms reserved by the current user
-Cancel Room Reservation:
+### Cancel Room Reservation:
   - Endpoint: /room/cancel-reservation
   - Method: POST
   - Cancels the reservation of a room
 
 ## User Controller
-Show All Users:
+### Show All Users:
   - Endpoint: /user/list
   - Method: GET
   - Displays a list of all users
-Edit User:
+### Edit User:
   - Endpoint: /user/edit/{id}
   - Method: GET
   - Displays a form to edit an existing user
-Update User:
+### Update User:
   - Endpoint: /user/update/{id}
   - Method: POST
   - Updates an existing user with new information
-Delete User:
+### Delete User:
   - Endpoint: /user/delete/{id}
   - Method: GET
   - Deletes a user from the system
-Show Registration Form:
+### Show Registration Form:
   - Endpoint: /user/register
   - Method: GET
   - Displays a registration form for new users
-Register User:
+### Register User:
   - Endpoint: /user/register
   - Method: POST
   - Registers a new user in the system
